@@ -10,52 +10,54 @@ import org.elasticsearch.common.component.LifecycleComponent;
 import org.elasticsearch.common.inject.Module;
 import org.elasticsearch.common.settings.Settings;
 
+import com.google.common.collect.ImmutableList;
+
+
 /**
  * @author summer
  *
  */
-public abstract class AbstractPlugin extends Plugin{
+public abstract class AbstractPlugin{
 
 	@Override
 	public Collection<Module> nodeModules() {
-		// TODO Auto-generated method stub
-		return super.nodeModules();
+		
+		 return ImmutableList.of();
 	}
 
 	@Override
 	public Collection<Class<? extends LifecycleComponent>> nodeServices() {
-		// TODO Auto-generated method stub
-		return super.nodeServices();
+		
+		return ImmutableList.of();
 	}
 
 	@Override
 	public Collection<Module> indexModules(Settings indexSettings) {
-		// TODO Auto-generated method stub
-		return super.indexModules(indexSettings);
+		
+		return ImmutableList.of();
 	}
 
 	@Override
 	public Collection<Class<? extends Closeable>> indexServices() {
-		// TODO Auto-generated method stub
-		return super.indexServices();
+		
+		return ImmutableList.of();
 	}
 
 	@Override
 	public Collection<Module> shardModules(Settings indexSettings) {
-		// TODO Auto-generated method stub
-		return super.shardModules(indexSettings);
+		return ImmutableList.of();
+				
 	}
 
 	@Override
 	public Collection<Class<? extends Closeable>> shardServices() {
-		// TODO Auto-generated method stub
-		return super.shardServices();
+		return ImmutableList.of();
 	}
 
 	@Override
 	public Settings additionalSettings() {
-		// TODO Auto-generated method stub
-		return super.additionalSettings();
+		
+		 return Settings.Builder.EMPTY_SETTINGS;
 	}
 
 
